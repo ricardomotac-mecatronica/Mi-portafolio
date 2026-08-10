@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Mota | Portafolio Mecatrónica & CAD</title>
+    <meta name="description" content="Portafolio profesional de Ricardo Mota. Técnico Superior en Mecatrónica especializado en diseño CAD, electrónica, prototipado rápido y sistemas de control automatizado.">
+    <meta name="keywords" content="Mecatrónica, CAD, Fusion 360, ESP32, Arduino, Impresión 3D, PCB, Automatización">
+    <meta name="author" content="Ricardo Mota">
+
+    <!-- Open Graph / Meta Etiquetas para Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ricardo Mota | Portafolio Mecatrónica & CAD">
+    <meta property="og:description" content="Especialista en desarrollo de prototipos funcionales, modelado 3D e integración de sistemas microcontrolados.">
+    <meta property="og:image" content="img/mouse-space-fisico.jpg">
+
+    <!-- Preconnect para librerías CDN (Optimización de carga) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Prism Syntax Highlighting CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Estilos específicos para la galería con miniaturas -->
+    <style>
+        .project-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 10px;
+            background: #111827;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .main-image-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #1a1a1a;
+        }
+
+        .main-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.2s ease-in-out;
+            display: block;
+        }
+
+        .gallery-thumbnails {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .gallery-thumbnails img {
+            width: 52px;
+            height: 52px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: 0.6;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .gallery-thumbnails img:hover {
+            opacity: 1;
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <!-- Datos Estructurados Schema.org (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ricardo Mota",
+      "jobTitle": "Técnico Superior en Mecatrónica",
+      "almaMater": "Instituto Especializado de Estudios Superiores Loyola",
+      "email": "mailto:Ricardoomotac@gmail.com",
+      "knowsAbout": ["Diseño CAD", "Electrónica", "Microcontroladores", "Fusion 360", "ESP32", "Control Automatizado"]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Accesibilidad: Enlace de salto al contenido principal -->
+    <a href="#main-content" class="skip-link" style="position:absolute; top:-40px; left:0; background:#000; color:#fff; padding:8px; z-index:1000; transition:top 0.3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Saltar al contenido principal</a>
+
+    <!-- Navegación Principal -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#" style="text-decoration:none; color:inherit;">Ricardo Mota</a>
+        </div>
+        <nav class="nav-links" aria-label="Navegación principal">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#experiencia">Trayectoria</a>
+            <a href="#contacto" class="btn-nav">Contacto</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Sección Hero / Inicio -->
+        <section class="hero" aria-label="Presentación principal">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <span class="badge">Técnico Superior en Mecatrónica</span>
+                    <h1>Diseño CAD, Electrónica y Control Automatizado</h1>
+                    <p>Especialista en desarrollo de prototipos funcionales, modelado 3D de alta precisión, circuitos electrónicos e integración de sistemas microcontrolados.</p>
+                    <div class="hero-action-buttons">
+                        <a href="#proyectos" class="btn-primary"><i class="fa-solid fa-cube" aria-hidden="true"></i> Ver Proyectos</a>
+                        <a href="#contacto" class="btn-secondary"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contactarme</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="cad-preview-box">
+                        <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+                        <div class="cad-grid-pattern"></div>
+                        <div class="spec-tag">CAD / FDM / EMBEDDED</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fa-solid fa-user-gear" aria-hidden="true"></i> Sobre mí</h2>
+                <div class="about-grid">
+                    <div class="about-desc">
+                        <p>Hola mi nombre es Ricardo Mota estudiante de la carrera  <strong>Técnico Superior en Mecatrónica</strong> en el <strong>Instituto Especializado de Estudios Superiores Loyola (IEESL)</strong>, apasionado por el diseño mecánico, la electrónica y la automatización.</p>
+                        <p>Mi enfoque abarca desde la concepción de mecanismos complejos, análisis de tolerancia y ensamble de piezas en entornos virtuales como <strong>Autodesk Fusion 360, Inventor y AutoCAD</strong>, hasta la implementación de hardware electrónico y programación en microcontroladores (ESP32, Arduino) para llevar conceptos abstractos a prototipos físicos altamente funcionales.</p>
+                    </div>
+                    <div class="skills-box">
+                        <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Habilidades Clave</h3>
+                        <ul class="skill-tags" style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px;">
+                            <li><span>Autodesk Fusion 360</span></li>
+                            <li><span>Autodesk Inventor</span></li>
+                            <li><span>AutoCAD</span></li>
+                            <li><span>Diseño PCB</span></li>
+                            <li><span>Impresión 3D FDM</span></li>
+                            <li><span>Microcontroladores ESP32</span></li>
+                            <li><span>Lenguaje C / C++</span></li>
+                            <li><span>Programación Python</span></li>
+                            <li><span>Mecanizado CNC Fanuc</span></li>
+                            <li><span>Metodología 5S</span></li>
+                            <li><span>Análisis de Datos</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title"><i class="fa-solid fa-folder-open" aria-hidden="true"></i> Proyectos de Mecatrónica</h2>
+                <p class="section-subtitle">Filtra y explora los proyectos según el área de especialización:</p>
+
+                <!-- Botones Filtro -->
+                <div class="filter-wrapper" role="tablist" aria-label="Filtro de proyectos">
+                    <button class="filter-btn active" data-filter="todos" role="tab" id="tab-todos" aria-selected="true" aria-controls="projects-grid">
+                        <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Todos
+                    </button>
+                    <button class="filter-btn" data-filter="cad" role="tab" id="tab-cad" aria-selected="false" aria-controls="projects-grid">
+                        <i class="fa-solid fa-cubes" aria-hidden="true"></i> Diseños CAD
+                    </button>
+                    <button class="filter-btn" data-filter="electronica" role="tab" id="tab-electronica" aria-selected="false" aria-controls="projects-grid">
+                        <i class="fa-solid fa-bolt" aria-hidden="true"></i> Electrónica
+                    </button>
+                    <button class="filter-btn" data-filter="control" role="tab" id="tab-control" aria-selected="false" aria-controls="projects-grid">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i> Programación & Control
+                    </button>
+                </div>
+
+                <!-- Grilla de Tarjetas de Proyectos -->
+                <div id="projects-grid" class="projects-grid" role="region" aria-live="polite">
+
+                    <!-- TARJETA PROYECTO: CIGÜEÑAL Y PISTONES -->
+                    <article class="project-card" data-category="cad">
+                        <div class="card-badge cad-badge"><i class="fa-solid fa-cubes" aria-hidden="true"></i> CAD</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-ciguenal" src="img/ciguenal-ensamble.jpg" alt="Ensamble Cigüeñal y Pistones" onerror="this.src='https://via.placeholder.com/400x220?text=Cigue%C3%B1al+3D'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/ciguenal-ensamble.jpg" alt="Ensamble Completo" onclick="changeImage('main-view-ciguenal', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Ensamble'">
+                                <img src="img/ciguenal-explosion.jpg" alt="Vista Explosionada" onclick="changeImage('main-view-ciguenal', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Explosion'">
+                                <img src="img/ciguenal-piston.jpg" alt="Detalle Pistón y Biela" onclick="changeImage('main-view-ciguenal', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Piston'">
+                                <img src="img/ciguenal-corte.jpg" alt="Vista de Corte/Perfil" onclick="changeImage('main-view-ciguenal', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Corte'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Ensamble de Cigüeñal y Pistones 3D</h3>
+                            <p>Modelado mecánico detallado de un sistema de cigüeñal con bielas y pistones, incluyendo restricciones de movimiento y análisis de ensamble CAD.</p>
+                            <div class="tech-tags">
+                                <span>CAD 3D</span>
+                                <span>Autodesk Inventor / Fusion 360</span>
+                                <span>Diseño Mecánico</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: BOMBA CENTRÍFUGA -->
+                    <article class="project-card" data-category="cad">
+                        <div class="card-badge cad-badge"><i class="fa-solid fa-cubes" aria-hidden="true"></i> CAD</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-bomba" src="img/bomba-centrifuga-isometrica.jpg" alt="Bomba Centrífuga 3D" onerror="this.src='https://via.placeholder.com/400x220?text=Bomba+Centrifuga+3D'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/bomba-centrifuga-isometrica.jpg" alt="Vista Isométrica" onclick="changeImage('main-view-bomba', this.src)" onerror="this.src='https://via.placeholder.com/50?text=3D'">
+                                <img src="img/bomba-centrifuga-explosion.jpg" alt="Vista Explosionada" onclick="changeImage('main-view-bomba', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Explosion'">
+                                <img src="img/bomba-centrifuga-corte.jpg" alt="Corte Transversal" onclick="changeImage('main-view-bomba', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Corte'">
+                                <img src="img/bomba-centrifuga-detalle.jpg" alt="Detalle Impulsor" onclick="changeImage('main-view-bomba', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Impulsor'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Diseño y Modelado de Bomba Centrífuga</h3>
+                            <p>Modelado 3D de una bomba centrífuga para transporte de fluidos, con diseño detallado de voluta, impulsor paletizado, carcasa de succión y sellos mecánicos.</p>
+                            <div class="tech-tags">
+                                <span>CAD 3D</span>
+                                <span>Diseño Mecánico</span>
+                                <span>Fluidos</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: SKATEBOARDING 3D -->
+                    <article class="project-card" data-category="cad">
+                        <div class="card-badge cad-badge"><i class="fa-solid fa-cubes" aria-hidden="true"></i> CAD</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-skate" src="img/skate-isometrica.jpg" alt="Patineta Skateboarding 3D" onerror="this.src='https://via.placeholder.com/400x220?text=Skateboarding+3D'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/skate-isometrica.jpg" alt="Vista Isométrica" onclick="changeImage('main-view-skate', this.src)" onerror="this.src='https://via.placeholder.com/50?text=3D'">
+                                <img src="img/skate-trucks.jpg" alt="Detalle Ejes / Trucks" onclick="changeImage('main-view-skate', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Ejes'">
+                                <img src="img/skate-explosion.jpg" alt="Vista Explosionada" onclick="changeImage('main-view-skate', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Explosion'">
+                                <img src="img/skate-inferior.jpg" alt="Vista Inferior / Ruedas" onclick="changeImage('main-view-skate', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Inferior'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Modelado 3D de Patineta (Skateboarding)</h3>
+                            <p>Diseño y ensamblaje CAD multi-pieza de una patineta, incluyendo geometría cóncava de la tabla, conjunto de ejes (trucks), ruedas de poliuretano y rodamientos.</p>
+                            <div class="tech-tags">
+                                <span>CAD 3D</span>
+                                <span>Diseño de Producto</span>
+                                <span>Ensamble</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: CARRITO ORGANIZADOR -->
+                    <article class="project-card" data-category="cad">
+                        <div class="card-badge cad-badge"><i class="fa-solid fa-cubes" aria-hidden="true"></i> CAD</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-carrito" src="img/carrito-organizador-isometrica.jpg" alt="Carrito Organizador 3D" onerror="this.src='https://via.placeholder.com/400x220?text=Carrito+Organizador+3D'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/carrito-organizador-isometrica.jpg" alt="Vista Isométrica" onclick="changeImage('main-view-carrito', this.src)" onerror="this.src='https://via.placeholder.com/50?text=3D'">
+                                <img src="img/carrito-organizador-estructura.jpg" alt="Estructura y Bandejas" onclick="changeImage('main-view-carrito', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Estructura'">
+                                <img src="img/carrito-organizador-ruedas.jpg" alt="Sistema de Ruedas" onclick="changeImage('main-view-carrito', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Ruedas'">
+                                <img src="img/carrito-organizador-explosion.jpg" alt="Vista Explosionada" onclick="changeImage('main-view-carrito', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Explosion'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Modelado de Carrito Organizador Múltiple</h3>
+                            <p>Diseño de estructura modular multi-nivel con estantes de almacenamiento, soportes tubulares y ruedas pivotantes para transporte de herramientas o insumos.</p>
+                            <div class="tech-tags">
+                                <span>CAD 3D</span>
+                                <span>Diseño Industrial</span>
+                                <span>Estructuras</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: SOPORTE DE CONOS -->
+                    <article class="project-card" data-category="cad">
+                        <div class="card-badge cad-badge"><i class="fa-solid fa-cubes" aria-hidden="true"></i> CAD</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-soporte" src="img/soporte-conos-isometrica.jpg" alt="Soporte de Conos 3D" onerror="this.src='https://via.placeholder.com/400x220?text=Soporte+de+Conos+3D'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/soporte-conos-isometrica.jpg" alt="Vista Isométrica" onclick="changeImage('main-view-soporte', this.src)" onerror="this.src='https://via.placeholder.com/50?text=3D'">
+                                <img src="img/soporte-conos-base.jpg" alt="Base de Anclaje" onclick="changeImage('main-view-soporte', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Base'">
+                                <img src="img/soporte-conos-top.jpg" alt="Vista Superior" onclick="changeImage('main-view-soporte', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Superior'">
+                                <img src="img/soporte-conos-explosion.jpg" alt="Vista Explosionada" onclick="changeImage('main-view-soporte', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Explosion'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Diseño y Modelado de Soporte de Conos</h3>
+                            <p>Estructura rígida optimizada para el posicionamiento y retención segura de elementos cónicos, diseñada considerando tolerancias dimensionales y facilidad de montaje.</p>
+                            <div class="tech-tags">
+                                <span>CAD 3D</span>
+                                <span>Diseño Mecánico</span>
+                                <span>Piezas de Soporte</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: BRAZO DE DIRECCIÓN -->
+                    <article class="project-card" data-category="cad">
+                        <div class="card-badge cad-badge"><i class="fa-solid fa-cubes" aria-hidden="true"></i> CAD</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-brazo" src="img/brazo-direccion-render.jpg" alt="Brazo de Dirección 3D" onerror="this.src='https://via.placeholder.com/400x220?text=Brazo+de+Direccion+3D'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/brazo-direccion-render.jpg" alt="Renderizado Realista" onclick="changeImage('main-view-brazo', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Render'">
+                                <img src="img/brazo-direccion-diseno.jpg" alt="Vista Diseño CAD" onclick="changeImage('main-view-brazo', this.src)" onerror="this.src='https://via.placeholder.com/50?text=CAD'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Brazo de Dirección Automotriz</h3>
+                            <p>Diseño mecánico de un componente de sistema de dirección para transmisión de esfuerzos dinámicos y guiado de ruedas.</p>
+                            <div class="tech-tags">
+                                <span class="tag">CAD 3D</span>
+                                <span class="tag">Automotriz</span>
+                                <span class="tag">Geometría Mecánica</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: PROCESADOR DE ALIMENTOS -->
+                    <article class="project-card" data-category="electronica">
+                        <div class="card-badge ele-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Electrónica & CAD</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-procesador" src="img/procesador-alimentos-render.jpg" alt="Procesador de Alimentos 3D" onerror="this.src='https://via.placeholder.com/400x220?text=Procesador+de+Alimentos+3D'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/procesador-alimentos-render.jpg" alt="Renderizado Realista" onclick="changeImage('main-view-procesador', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Render'">
+                                <img src="img/procesador-alimentos-diseno.jpg" alt="Vista Diseño CAD" onclick="changeImage('main-view-procesador', this.src)" onerror="this.src='https://via.placeholder.com/50?text=CAD'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Diseño de Procesador de Alimentos</h3>
+                            <p>Modelado de electrodoméstico compacto con ensamble de cuchillas, vaso contenedor y carcasa ergonómica para integración de motor.</p>
+                            <div class="tech-tags">
+                                <span>CAD 3D</span>
+                                <span>Diseño de Producto</span>
+                                <span>Electrodomésticos</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: MOUSE SPACE (Controlador 3D) -->
+                    <article class="project-card" data-category="control">
+                        <div class="card-badge ctrl-badge"><i class="fa-solid fa-gamepad" aria-hidden="true"></i> Control & CAD</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-mousespace" src="img/mouse-space-isometrica.jpg" alt="Mouse Space Vista 3D" onerror="this.src='https://via.placeholder.com/400x220?text=Mouse+Space+3D'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/mouse-space-isometrica.jpg" alt="Vista Isométrica 3D" onclick="changeImage('main-view-mousespace', this.src)" onerror="this.src='https://via.placeholder.com/50?text=CAD'">
+                                <img src="img/mouse-space-arduino.jpg" alt="Circuito Arduino" onclick="changeImage('main-view-mousespace', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Arduino'">
+                                <img src="img/mouse-space-python.jpg" alt="Interfaz Python / 3D" onclick="changeImage('main-view-mousespace', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Python'">
+                                <img src="img/mouse-space-fisico.jpg" alt="Prototipo Físico" onclick="changeImage('main-view-mousespace', this.src)" onerror="this.src='https://via.placeholder.com/50?text=Fisico'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Mouse Space (Controlador 3D)</h3>
+                            <p>Dispositivo de entrada basado en Arduino R3 y Joystick para navegación e interacción en entornos 3D mediante comunicación serial en Python.</p>
+                            <div class="tech-tags">
+                                <span>Arduino</span>
+                                <span>Python</span>
+                                <span>CAD / 3D</span>
+                                <span>Mecatrónica</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: INHABILITADOR DE SEÑAL RF / JAMMER -->
+                    <article class="project-card" data-category="electronica">
+                        <div class="card-badge ele-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Electrónica & RF</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-jammer" src="img/jammer1.jpg" alt="Jammer RF - Vista 1" onerror="this.src='https://via.placeholder.com/400x220?text=Jammer+RF+1'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/jammer1.jpg" alt="Vista 1" onclick="changeImage('main-view-jammer', this.src)" onerror="this.src='https://via.placeholder.com/50?text=1'">
+                                <img src="img/jammer2.jpg" alt="Vista 2" onclick="changeImage('main-view-jammer', this.src)" onerror="this.src='https://via.placeholder.com/50?text=2'">
+                                <img src="img/jammer3.jpg" alt="Vista 3" onclick="changeImage('main-view-jammer', this.src)" onerror="this.src='https://via.placeholder.com/50?text=3'">
+                                <img src="img/jammer4.jpg" alt="Vista 4" onclick="changeImage('main-view-jammer', this.src)" onerror="this.src='https://via.placeholder.com/50?text=4'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Inhabilitador de Señal RF / Jammer Dual (2.4 GHz)</h3>
+                            <p>Diseño de circuito impreso personalizado basado en microcontrolador ESP32 y doble módulo transceptor nRF24L01 configurados en buses SPI independientes (HSPI y VSPI) para emisión controlada en la banda de 2.4 GHz.</p>
+                            <div class="tech-tags">
+                                <span>ESP32</span>
+                                <span>Radiofrecuencia</span>
+                                <span>EasyEDA / PCB</span>
+                                <span>Embedded Systems</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: AMPLIFICADOR DE AUDIO -->
+                    <article class="project-card" data-category="electronica">
+                        <div class="card-badge ele-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Electrónica & PCB</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-amplificador" src="img/amplificador1.jpg" alt="Amplificador de Audio - Vista 1" onerror="this.src='https://via.placeholder.com/400x220?text=Amplificador+1'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/amplificador1.jpg" alt="Vista 1" onclick="changeImage('main-view-amplificador', this.src)" onerror="this.src='https://via.placeholder.com/50?text=1'">
+                                <img src="img/amplificador2.jpg" alt="Vista 2" onclick="changeImage('main-view-amplificador', this.src)" onerror="this.src='https://via.placeholder.com/50?text=2'">
+                                <img src="img/amplificador3.jpg" alt="Vista 3" onclick="changeImage('main-view-amplificador', this.src)" onerror="this.src='https://via.placeholder.com/50?text=3'">
+                                <img src="img/amplificador4.jpg" alt="Vista 4" onclick="changeImage('main-view-amplificador', this.src)" onerror="this.src='https://via.placeholder.com/50?text=4'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Amplificador de Audio de Potencia</h3>
+                            <p>Diseño y ensamblaje de etapas de amplificación de señal de audio analógica con bajo nivel de distorsión, filtrado de ruido y gestión térmica mediante disipadores.</p>
+                            <div class="tech-tags">
+                                <span>Electrónica Analógica</span>
+                                <span>Audio</span>
+                                <span>Circuitos de Potencia</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: SEMÁFORO SECUENCIAL -->
+                    <article class="project-card" data-category="control">
+                        <div class="card-badge ele-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Electrónica & Control</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img src="img/semaforo1.jpg" alt="Semáforo Secuencial" onerror="this.src='https://via.placeholder.com/400x220?text=Semaforo+1'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Controlador de Semáforo Secuencial con Buzzer</h3>
+                            <p>Sistema automatizado de control de tráfico a pequeña escala con conmutación temporizada de LEDs (verde, amarillo, rojo) y aviso sonoro mediante zumbador piezoeléctrico.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Automatización</span>
+                                <span class="tag">Lógica Secuencial</span>
+                                <span class="tag">Microcontroladores</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: REGULADOR 70V -->
+                    <article class="project-card" data-category="electronica">
+                        <div class="card-badge ele-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Potencia</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img id="main-view-regulador" src="img/regulador1.jpg" alt="Regulador de Voltaje - Vista 1" onerror="this.src='https://via.placeholder.com/400x220?text=Regulador+1'">
+                            </div>
+                            <div class="gallery-thumbnails">
+                                <img src="img/regulador1.jpg" alt="Vista 1" onclick="changeImage('main-view-regulador', this.src)" onerror="this.src='https://via.placeholder.com/50?text=1'">
+                                <img src="img/regulador2.jpg" alt="Vista 2" onclick="changeImage('main-view-regulador', this.src)" onerror="this.src='https://via.placeholder.com/50?text=2'">
+                                <img src="img/regulador3.jpg" alt="Vista 3" onclick="changeImage('main-view-regulador', this.src)" onerror="this.src='https://via.placeholder.com/50?text=3'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Fuente Regulada Variable Alta Tensión (hasta 70V)</h3>
+                            <p>Diseño e implementación de un circuito de alimentación continua regulable con etapas de rectificación, filtrado capacitivo y ajuste fino de voltaje de salida hasta 70V DC.</p>
+                            <div class="tech-tags">
+                                <span>Electrónica de Potencia</span>
+                                <span>Fuentes DC</span>
+                                <span>Diseño de Circuitos</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: CIRCUITO OSCILADOR -->
+                    <article class="project-card" data-category="electronica">
+                        <div class="card-badge ele-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Electrónica Analógica</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img src="img/oscilador1.jpg" alt="Circuito Oscilador" onerror="this.src='https://via.placeholder.com/400x220?text=Circuito+Oscilador'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Generador de Señales y Oscilador de Frecuencia</h3>
+                            <p>Diseño de circuito de onda periódica para generación de señales a frecuencias fijas y variables, utilizado en pruebas de sincronismo y conmutación.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Generación de Señal</span>
+                                <span class="tag">Osciladores</span>
+                                <span class="tag">Instrumentación</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: DETECTOR DE NIVEL DE AGUA -->
+                    <article class="project-card" data-category="electronica">
+                        <div class="card-badge ele-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Instrumentación</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img src="img/nivel1.jpg" alt="Detector de Nivel de Agua" onerror="this.src='https://via.placeholder.com/400x220?text=Detector+Nivel+Agua'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Indicador y Detector de Nivel de Agua</h3>
+                            <p>Sistema de monitoreo de llenado de depósitos por detección de conductividad de sondas, con alertas mediante indicadores luminosos para automatización de bombeo.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Sensores</span>
+                                <span class="tag">Control de Procesos</span>
+                                <span class="tag">Electrónica Básica</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA PROYECTO: DETECTOR DE FUEGO -->
+                    <article class="project-card" data-category="electronica">
+                        <div class="card-badge ele-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Seguridad Industrial</div>
+                        <div class="card-media project-gallery">
+                            <div class="main-image-container">
+                                <img src="img/fuego1.jpg" alt="Detector de Fuego" onerror="this.src='https://via.placeholder.com/400x220?text=Detector+de+Fuego'">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Sistema Detector de Fuego por Infrarrojos</h3>
+                            <p>Circuito de seguridad industrial basado en fotosensor infrarrojo y amplificadores operacionales para respuesta ultrarrápida ante presencia de flama directa.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Seguridad Industrial</span>
+                                <span class="tag">Sensores IR</span>
+                                <span class="tag">Prototipado</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Trayectoria & Formación -->
+        <section id="experiencia" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Trayectoria & Formación</h2>
+                <div class="timeline">
+                    
+                    <!-- Educación Superior -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
+                        <div class="timeline-content">
+                            <span class="date">En curso</span>
+                            <h3>Tecnólogo Superior en Mecatrónica</h3>
+                            <span class="institution">Instituto Especializado de Estudios Superiores Loyola (IEESL)</span>
+                            <p>Especialización técnica en robótica, procesos industriales, diseño CAD/CAM avanzado e integración de sistemas microcontrolados.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cursos Técnicos Loyola -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-wrench" aria-hidden="true"></i></div>
+                        <div class="timeline-content">
+                            <span class="date">Formación Técnica</span>
+                            <h3>Técnico Industrial & Electrónica</h3>
+                            <span class="institution">Instituto Politécnico Loyola</span>
+                            <ul class="skill-tags" style="list-style:none; padding:0; margin-top:10px; display:flex; flex-wrap:wrap; gap:8px;">
+                                <li><span>Auxiliar de Mecánica Industrial</span></li>
+                                <li><span>Dibujo Técnico Industrial</span></li>
+                                <li><span>Tornero</span></li>
+                                <li><span>Fresadora</span></li>
+                                <li><span>Electrónica Básica</span></li>
+                                <li><span>Análisis de Circuitos Electrónicos</span></li>
+                                <li><span>Electrónica Industrial</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Cursos INFOTEP, Udemy & Especializados -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                        <div class="timeline-content">
+                            <span class="date">Certificaciones & Talleres</span>
+                            <h3>Capacitación Técnica Especializada</h3>
+                            <span class="institution">INFOTEP, Udemy & Plataformas Digitales</span>
+                            <ul class="skill-tags" style="list-style:none; padding:0; margin-top:10px; display:flex; flex-wrap:wrap; gap:8px;">
+                                <li><span>Programación CNC Fanuc (Udemy)</span></li>
+                                <li><span>Manejo de Paquetes de Oficina e Internet (INFOTEP)</span></li>
+                                <li><span>Diseño de Circuitos Electrónicos</span></li>
+                                <li><span>Programador de Microcontroladores</span></li>
+                                <li><span>Diseñador de Objetos 3D</span></li>
+                                <li><span>Programación Básica Python</span></li>
+                                <li><span>Diseño de Prompts para IA Generativa</span></li>
+                                <li><span>Electricista Básico (Instalación Básica)</span></li>
+                                <li><span>Análisis de Datos & Big Data</span></li>
+                                <li><span>Supervisor de Operaciones</span></li>
+                                <li><span>Habilidades de Presentación</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Bachillerato -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-school" aria-hidden="true"></i></div>
+                        <div class="timeline-content">
+                            <span class="date">Secundaria</span>
+                            <h3>Bachillerato Concluido</h3>
+                            <span class="institution">Liceo Fray Sebastián Funleal</span>
+                            <p>Título de bachiller completado con éxito.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sección Contacto / Pie de página -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p>Disponible para colaboraciones en diseño de productos mecánicos, desarrollo de prototipos electrónicos y consultoría mecatrónica.</p>
+            
+            <div class="contact-buttons">
+                <a href="mailto:Ricardoomotac@gmail.com" class="btn-contact">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> Enviar Correo Ricardo Mota
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-contact btn-outline">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ricardo Mota. Tech Superior Mecatrónica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js" defer></script>
+    
+    <!-- Función de JavaScript para la galería de imágenes -->
+    <script>
+        function changeImage(mainImageId, newSrc) {
+            const mainImg = document.getElementById(mainImageId);
+            if (!mainImg) return;
+            mainImg.style.opacity = '0.3';
+            setTimeout(() => {
+                mainImg.src = newSrc;
+                mainImg.style.opacity = '1';
+            }, 150);
+        }
+    </script>
+
+    <!-- Script interactivo de filtrado de proyectos optimizado -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    
+                    button.classList.add('active');
+                    button.setAttribute('aria-selected', 'true');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filterValue === 'todos' || filterValue === category) {
+                            card.hidden = false;
+                            card.style.display = 'flex';
+                            requestAnimationFrame(() => {
+                                card.style.opacity = '1';
+                            });
+                        } else {
+                            card.style.opacity = '0';
+                            card.hidden = true;
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="js/main.js" defer></script>
+aqui 
+
+<!-- Modal Lightbox para Zoom de Imágenes -->
+<div id="imgModal" class="image-modal" onclick="closeModal()">
+    <span class="close-btn">&times;</span>
+    <img id="modalImg" src="" alt="Zoom de imagen">
+</div>
+
+<script>
+    function openModal(imgSrc) {
+        const modal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+        modal.style.display = 'flex';
+        modalImg.src = imgSrc;
+    }
+
+    function closeModal() {
+        document.getElementById('imgModal').style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const projectImages = document.querySelectorAll('.card-media img, .main-image-container img, .gallery-thumbnails img');
+        projectImages.forEach(img => {
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openModal(img.src);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
